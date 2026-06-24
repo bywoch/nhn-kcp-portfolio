@@ -10,6 +10,6 @@
 - `img/ptpro_040_pc.png`
 - `img/ptpro_039_pc.png`
 - `img/ptpro_039_m.png`
-- `img/img_orign/ptpro_021-2_pc-16'9.jpg`
+- `img/img_orign/ptpro_021_pc.jpg`
 - `img/img_orign/ptpro_021-2_m-315.jpg`
 - `img/img_orign/ptpro_024.jpg`

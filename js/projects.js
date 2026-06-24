@@ -193,8 +193,8 @@ window.PORTFOLIO_PROJECTS = [
     result: "기사 카드, 목록, 공통 레이아웃의 UI 기준을 정리하고 반응형 화면 구현, 디자인 일관성, 초기 화면 표시 안정성 개선에 기여했습니다.",
     visualType: "media",
     images: [
-      { src: "./img/img_orign/ptpro_021-2_pc-16'9.jpg", alt: "코리아타임스 뉴 플랫폼 PC 화면", type: "pc" },
-      { src: "./img/img_orign/ptpro_021-2_m-315.jpg", alt: "코리아타임스 뉴 플랫폼 모바일 화면", type: "mobile" }
+      { src: "./img/ptpro_021_pc.jpg", alt: "코리아타임스 뉴 플랫폼 PC 화면", type: "pc" },
+      { src: "./img/ptpro_021_m.jpg", alt: "코리아타임스 뉴 플랫폼 모바일 화면", type: "mobile" }
     ]
   },
   {
@@ -239,7 +239,7 @@ window.PORTFOLIO_PROJECTS = [
     result: "웹 접근성 인증 마크 획득 프로젝트에서 담당 UI 보수와 접근성 점검 작업에 기여하고, 콘텐츠 구조와 정보 접근성을 개선했습니다.",
     visualType: "accessibility",
     images: [
-      { src: "./img/img_orign/ptpro_024.jpg", alt: "iMBC 홈페이지 웹 접근성 개선 화면", type: "pc" }
+      { src: "./img/ptpro_024.jpg", alt: "iMBC 홈페이지 웹 접근성 개선 화면", type: "pc" }
     ]
   }
 ];

@@ -145,7 +145,7 @@ p, h1, h2, h3 {margin: 0;}
 .site_footer {padding: 24px 0; border-top: 1px solid var(--line); color: var(--text-muted); font-size: 13px;}
 .footer_inner {display: flex; justify-content: space-between; gap: 16px;}
 .footer_inner a {font-weight: 800; color: var(--text);}
-
+.footer_inner .to_top {border: 0; padding: 0; background: none; font-weight: 800; color: var(--text); cursor: pointer;}
 /* Responsive - Tablet */
 @media (max-width: 1024px) {
   .strength_grid, .checklist_grid {grid-template-columns: repeat(2, minmax(0, 1fr));}

@@ -12,9 +12,9 @@
 <body id="top">
   <a class="skip_link" href="#main">본문 바로가기</a>
 
-  <header class="site_header" id="top">
+  <header class="site_header" id="header">
     <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="정병우 포트폴리오 홈">
+      <a class="brand" href="./" aria-label="정병우 포트폴리오 홈">
         <span class="brand_name">정병우</span>
         <span class="brand_role">Web Publisher</span>
       </a>
@@ -28,6 +28,7 @@
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#career">Career</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -42,9 +43,9 @@
           <p class="hero_desc">
             React·Vue 기반 프로젝트 환경에서 운영성 웹서비스 UI 구축과 유지보수를 수행해왔습니다.
             커머스, 판매자 센터, 콘텐츠 서비스의 PC·모바일 화면을 구현하며 웹 표준, 접근성, 반응형,
-            크로스브라우징 QA를 고려한 화면 품질 개선에 집중합니다.
+            크로스브라우징 QA를 고려한 화면 품질 개선에 집중하고 있습니다.
           </p>
-          <div class="hero_actions" aria-label="주요 링크">
+          <div class="hero_actions" role="group" aria-label="주요 링크">
             <a class="btn primary" href="#projects">프로젝트 보기</a>
             <a class="btn secondary" href="assets/정병우_NHN_KCP_웹퍼블리셔_포트폴리오.pdf" download>포트폴리오 PDF 다운로드</a>
           </div>
@@ -197,7 +198,7 @@
       </div>
     </section>
 
-    <section class="section section_muted" aria-labelledby="career_title">
+    <section class="section section_muted" id="career" aria-labelledby="career_title">
       <div class="container">
         <div class="section_heading">
           <p class="eyebrow">Career Timeline</p>
@@ -250,7 +251,7 @@
   <footer class="site_footer">
     <div class="container footer_inner">
       <p>© 2026 Byungwoo Chung. Web Publisher Portfolio.</p>
-      <a href="#top">맨 위로</a>
+      <button type="button" class="to_top">맨 위로</button>
     </div>
   </footer>
 
