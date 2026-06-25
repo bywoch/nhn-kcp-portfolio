@@ -3,6 +3,9 @@
   const nav = document.querySelector("#site_nav");
   const navLinks = nav ? nav.querySelectorAll("a") : [];
 
+  // 실제 헤더 높이 기준 보정값
+  const HEADER_OFFSET = 72;
+
   // 모바일 메뉴 상태 초기화
   function closeNav() {
     if (!navToggle || !nav) return;
@@ -10,6 +13,29 @@
     navToggle.setAttribute("aria-expanded", "false");
     nav.classList.remove("is-open");
     document.body.classList.remove("nav-open");
+  }
+
+  // URL에 #career 같은 해시가 붙지 않도록 직접 스크롤 처리
+  function moveToSection(link) {
+    const href = link.getAttribute("href");
+
+    if (!href || !href.startsWith("#")) return;
+
+    const target = document.querySelector(href);
+
+    if (!target) return;
+
+    const targetTop = target.getBoundingClientRect().top + window.pageYOffset - HEADER_OFFSET;
+
+    window.scrollTo({
+      top: targetTop,
+      behavior: "smooth"
+    });
+
+    // 혹시 이미 URL에 #career가 붙어 있으면 제거
+    if (window.location.hash) {
+      history.replaceState(null, "", window.location.pathname + window.location.search);
+    }
   }
 
   if (navToggle && nav) {
@@ -22,19 +48,16 @@
       document.body.classList.toggle("nav-open");
     });
 
-    // 주요 메뉴 클릭 시 URL 해시 변경 없이 섹션으로 이동
+    // 주요 메뉴 클릭 시 URL 해시 변경 없이 해당 섹션으로 이동
     navLinks.forEach(function (link) {
       link.addEventListener("click", function (event) {
-        const targetId = link.getAttribute("href");
-        if (!targetId || !targetId.startsWith("#")) return;
-        const target = document.querySelector(targetId);
-        if (!target) return;
-        event.preventDefault();
-        target.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
-        closeNav();
+        const href = link.getAttribute("href");
+
+        if (href && href.startsWith("#")) {
+          event.preventDefault();
+          closeNav();
+          moveToSection(link);
+        }
       });
     });
 
@@ -110,27 +133,31 @@
   const createProjectImages = function (project) {
     if (project.images && project.images.length > 0) {
       return `
-        <section class="project_image_panel" aria-labelledby="${escapeHtml(project.id)}-screenshots">
-          <h3 id="${escapeHtml(project.id)}-screenshots">Screenshots</h3>
-          <div class="project_images">
-            ${project.images.map(function (image) {
+      <section class="project_image_panel" aria-labelledby="${escapeHtml(project.id)}-screenshots">
+        <h3 id="${escapeHtml(project.id)}-screenshots">Screenshots</h3>
+        <div class="project_images">
+          ${project.images.map(function (image) {
         const imageType = image.type ? ` is-${escapeHtml(image.type)}` : "";
+        const widthAttr = image.width ? ` width="${escapeHtml(image.width)}"` : "";
+        const heightAttr = image.height ? ` height="${escapeHtml(image.height)}"` : "";
+
         return `
-                <figure class="${imageType.trim()}">
-                  <img src="${escapeHtml(image.src)}" alt="${escapeHtml(image.alt)}" loading="lazy">
-                </figure>
-              `;
+              <figure class="${imageType.trim()}">
+                <img src="${escapeHtml(image.src)}" alt="${escapeHtml(image.alt)}"${widthAttr}${heightAttr} loading="lazy">
+              </figure>
+            `;
       }).join("")}
-          </div>
-        </section>
-      `;
-    }
-    return `
-      <section class="project_image_panel" aria-labelledby="${escapeHtml(project.id)}-preview">
-        <h3 id="${escapeHtml(project.id)}-preview">UI Preview</h3>
-        ${createMockPreview(project)}
+        </div>
       </section>
     `;
+    }
+
+    return `
+    <section class="project_image_panel" aria-labelledby="${escapeHtml(project.id)}-preview">
+      <h3 id="${escapeHtml(project.id)}-preview">UI Preview</h3>
+      ${createMockPreview(project)}
+    </section>
+  `;
   };
 
   // 스크린샷이 없는 프로젝트의 UI 목업 생성

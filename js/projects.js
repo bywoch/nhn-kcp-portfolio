@@ -49,8 +49,8 @@ window.PORTFOLIO_PROJECTS = [
     result: "사람인 스토어 구매자 서비스의 홈, 상품 리스트, 프로모션 영역에서 UI 일관성을 유지하고 상품 정보 가독성과 운영 유지보수성을 개선했습니다.",
     visualType: "commerce",
     images: [
-      { src: "./img/ptpro_037_pc.png", alt: "사람인 스토어 구매자 서비스 PC 화면", type: "pc" },
-      { src: "./img/ptpro_037_m.png", alt: "사람인 스토어 구매자 서비스 모바일 화면", type: "mobile" }
+      { src: "./img/ptpro_037_pc.png", alt: "사람인 스토어 구매자 서비스 PC 화면", type: "pc", width: 1440, height: 1070 },
+      { src: "./img/ptpro_037_m.png", alt: "사람인 스토어 구매자 서비스 모바일 화면", type: "mobile", width: 850, height: 1600 }
     ]
   },
   {
@@ -83,8 +83,8 @@ window.PORTFOLIO_PROJECTS = [
     result: "복잡한 판매자 센터 화면을 폼, 테이블, 상태값, 안내 영역 중심으로 정리해 운영 업무 흐름을 명확하게 구성했습니다.",
     visualType: "admin",
     images: [
-      { src: "./img/ptpro_038_pc.png", alt: "사람인 스토어 판매자 센터 PC 화면", type: "pc" },
-      { src: "./img/ptpro_038_m.png", alt: "사람인 스토어 판매자 센터 모바일 화면", type: "mobile" }
+      { src: "./img/ptpro_038_pc.png", alt: "사람인 스토어 판매자 센터 PC 화면", type: "pc", width: 1440, height: 1070 },
+      { src: "./img/ptpro_038_m.png", alt: "사람인 스토어 판매자 센터 모바일 화면", type: "mobile", width: 850, height: 1600 }
     ]
   },
   {
@@ -117,7 +117,7 @@ window.PORTFOLIO_PROJECTS = [
     result: "기업회원 채용상품 안내 페이지의 상품 탐색 흐름과 주요 정보 노출 구조를 정리하고 운영성 콘텐츠 관리 효율을 개선했습니다.",
     visualType: "product",
     images: [
-      { src: "./img/ptpro_040_pc.png", alt: "사람인 채용상품 안내 페이지 PC 화면", type: "pc" }
+      { src: "./img/ptpro_040_pc.png", alt: "사람인 채용상품 안내 페이지 PC 화면", type: "pc", width: 1912, height: 914 }
     ]
   },
   {
@@ -159,8 +159,8 @@ window.PORTFOLIO_PROJECTS = [
     result: "초기 안내, 질문 입력, AI 응답 대기, 결과 확인, 공고 비교까지 이어지는 복합 UI 흐름을 체계화했습니다.",
     visualType: "ai",
     images: [
-      { src: "./img/ptpro_039_pc.png", alt: "사람인 AI 커리어 서비스 PC 화면", type: "pc" },
-      { src: "./img/ptpro_039_m.png", alt: "사람인 AI 커리어 서비스 모바일 화면", type: "mobile" }
+      { src: "./img/ptpro_039_pc.png", alt: "사람인 AI 커리어 서비스 PC 화면", type: "pc", width: 1440, height: 1070 },
+      { src: "./img/ptpro_039_m.png", alt: "사람인 AI 커리어 서비스 모바일 화면", type: "mobile", width: 850, height: 1600 }
     ]
   },
   {
@@ -193,8 +193,8 @@ window.PORTFOLIO_PROJECTS = [
     result: "기사 카드, 목록, 공통 레이아웃의 UI 기준을 정리하고 반응형 화면 구현, 디자인 일관성, 초기 화면 표시 안정성 개선에 기여했습니다.",
     visualType: "media",
     images: [
-      { src: "./img/ptpro_021_pc.jpg", alt: "코리아타임스 뉴 플랫폼 PC 화면", type: "pc" },
-      { src: "./img/ptpro_021_m.jpg", alt: "코리아타임스 뉴 플랫폼 모바일 화면", type: "mobile" }
+      { src: "./img/ptpro_021_pc.jpg", alt: "코리아타임스 뉴 플랫폼 PC 화면", type: "pc", width: 1920, height: 1080 },
+      { src: "./img/ptpro_021_m.jpg", alt: "코리아타임스 뉴 플랫폼 모바일 화면", type: "mobile", width: 425, height: 823 }
     ]
   },
   {
@@ -239,7 +239,7 @@ window.PORTFOLIO_PROJECTS = [
     result: "웹 접근성 인증 마크 획득 프로젝트에서 담당 UI 보수와 접근성 점검 작업에 기여하고, 콘텐츠 구조와 정보 접근성을 개선했습니다.",
     visualType: "accessibility",
     images: [
-      { src: "./img/ptpro_024.jpg", alt: "iMBC 홈페이지 웹 접근성 개선 화면", type: "pc" }
+      { src: "./img/ptpro_024.jpg", alt: "iMBC 홈페이지 웹 접근성 개선 화면", type: "pc", width: 990, height: 660 }
     ]
   }
 ];
