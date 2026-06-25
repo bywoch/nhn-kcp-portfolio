@@ -80,7 +80,7 @@ p, h1, h2, h3 {margin: 0;}
 .project_summary h3 {margin-top: 12px; font-size: clamp(26px, 4vw, 38px); line-height: 1.2; letter-spacing: -0.05em;}
 .project_summary>p:not(.project_kicker) {margin-top: 18px; color: var(--text-muted);}
 .project_meta {display: grid; gap: 8px; margin-top: 24px; padding: 18px; border-radius: var(--radius-md); background: #fff; border: 1px solid var(--line);}
-.project_meta li {color: var(--text-muted); font-size: 14px;}
+.project_meta li {display: flex; var(--text-muted); font-size: 14px;}
 .project_meta strong {display: inline-block; min-width: 70px; color: var(--text);}
 .project_actions {display: flex; gap: 16px; align-items: center; margin-top: 26px;}
 .project_visual {position: relative; min-height: 420px; display: flex; align-items: center; justify-content: center;}
@@ -145,7 +145,7 @@ p, h1, h2, h3 {margin: 0;}
 .site_footer {padding: 24px 0; border-top: 1px solid var(--line); color: var(--text-muted); font-size: 13px;}
 .footer_inner {display: flex; justify-content: space-between; gap: 16px;}
 .footer_inner a {font-weight: 800; color: var(--text);}
-.footer_inner .to_top {border: 0; padding: 0; background: none; font-weight: 800; color: var(--text); cursor: pointer;}
+
 /* Responsive - Tablet */
 @media (max-width: 1024px) {
   .strength_grid, .checklist_grid {grid-template-columns: repeat(2, minmax(0, 1fr));}
@@ -169,7 +169,7 @@ p, h1, h2, h3 {margin: 0;}
   .strength_grid, .checklist_grid, .contribution_grid {grid-template-columns: 1fr;}
   .skill_row {grid-template-columns: 1fr; gap: 14px; padding: 20px;}
   .project_card {padding: 22px;}
-  .project_meta strong {display: block; min-width: 0; margin-bottom: 2px;}
+  .project_meta strong {display: block; min-width: 60px; margin-bottom: 2px;}
   .project_actions {flex-wrap: wrap;}
   .mock_phone {position: relative; right: auto; bottom: auto; margin: -35px 0 0 auto;}
   .mock_products {grid-template-columns: 1fr;}
