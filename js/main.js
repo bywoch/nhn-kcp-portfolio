@@ -22,20 +22,9 @@
       document.body.classList.toggle("nav-open");
     });
 
-    // 주요 메뉴 클릭 시 URL 해시 변경 없이 섹션으로 이동
+    // 앵커 이동 후 모바일 메뉴 닫기
     navLinks.forEach(function (link) {
-      link.addEventListener("click", function (event) {
-        const targetId = link.getAttribute("href");
-        if (!targetId || !targetId.startsWith("#")) return;
-        const target = document.querySelector(targetId);
-        if (!target) return;
-        event.preventDefault();
-        target.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
-        closeNav();
-      });
+      link.addEventListener("click", closeNav);
     });
 
     // 데스크톱 전환 시 모바일 메뉴 상태 제거
@@ -213,10 +202,10 @@
           <h3 id="${titleId}">${escapeHtml(project.title)}</h3>
           <p>${escapeHtml(project.summary)}</p>
           <ul class="project_meta" aria-label="프로젝트 요약">
-            <li><strong>역할</strong> ${escapeHtml(project.role)}</li>
-            <li><strong>참여 범위</strong> ${escapeHtml(project.scope)}</li>
-            <li><strong>기간</strong> ${escapeHtml(project.period)}</li>
-            <li><strong>기술</strong> ${escapeHtml(project.tech.join(", "))}</li>
+            <li><strong>역할</strong><span>${escapeHtml(project.role)}<span></li>
+            <li><strong>참여 범위</strong><span>${escapeHtml(project.scope)}<span></li>
+            <li><strong>기간</strong><span>${escapeHtml(project.period)}<span></li>
+            <li><strong>기술</strong><span>${escapeHtml(project.tech.join(", "))}<span></li>
           </ul>
           <div class="tag_list" aria-label="프로젝트 키워드">
             ${createTagList(project.tags)}
@@ -285,13 +274,3 @@ ${createDetailProjectLinks(project.detailLinks)}
   // 프로젝트 상세 섹션 렌더링
   projectDetailList.innerHTML = projects.map(createProjectDetail).join("");
 })();
-
-const topButton = document.querySelector(".to_top");
-if (topButton) {
-  topButton.addEventListener("click", function () {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  });
-}
